@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'PP Pangaia';
+  src: url('/PPPangaia-Ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-ted-red: #EB0028;
+  --color-ted-red-dark: #C50022;
+  --color-ted-black: #1A1A1A;
+  --color-ted-white: #FFFFFF;
+  --color-ted-gray: #F5F5F5;
+  --color-ted-gray-dark: #333333;
+  --color-nav-dark: #272525;
+  --color-nav-blue: #0036D8;
+  --font-sans: 'Early Sans Variable', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ted-black);
+  color: var(--color-ted-white);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .event-info-container {
+    top: 76.9% !important;
+  }
+
+  .footer-section {
+    height: 128vw !important;
+  }
+  .footer-heading {
+    left: 5.38vw !important;
+    top: 21.03vw !important;
+  }
+  .footer-heading span {
+    font-size: 13.13vw !important;
+    line-height: 13.13vw !important;
+  }
+  .footer-body {
+    left: 5.38vw !important;
+    top: 57.18vw !important;
+    width: calc(100% - 7.44vw) !important;
+  }
+  .footer-body p {
+    font-size: 16px !important;
+    line-height: 19.2px !important;
+    font-family: 'Early Sans Variable' !important;
+    font-weight: 400 !important;
+  }
+}
