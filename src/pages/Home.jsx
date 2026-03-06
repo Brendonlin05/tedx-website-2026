@@ -58,12 +58,12 @@ export default function Home() {
           <img
             src="/Eunoia wordmark.png"
             alt="Eunoia"
+            className="max-w-[80%] md:max-w-[60%]"
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              maxWidth: '60%',
             }}
           />
 
