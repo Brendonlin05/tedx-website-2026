@@ -70,7 +70,7 @@ function MemberCard({ name, position, photo }) {
       <div style={{position: 'absolute', inset: 0, borderRadius: 20, outline: 'max(1px, 0.07vw) white solid', outlineOffset: 'calc(-1 * max(1px, 0.07vw))', pointerEvents: 'none', zIndex: 3}} />
 
       {/* Text area */}
-      <div style={{
+      <div className="member-card-textbox" style={{
         position: 'absolute',
         top: '74%',
         left: 0,
@@ -81,23 +81,9 @@ function MemberCard({ name, position, photo }) {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '0 clamp(14px, 1.74vw, 25px)',
-        gap: '0px',
       }}>
-        <div style={{
-          color: 'white',
-          fontSize: 'clamp(30px, 1.8vw, 26px)',
-          fontFamily: 'PP Pangaia',
-          fontWeight: '200',
-          wordWrap: 'break-word',
-        }}>{name}</div>
-        <div style={{
-          color: 'white',
-          fontSize: 'clamp(10px, 0.9vw, 14px)',
-          fontFamily: "'Noto Sans Display', 'Noto Sans', Arial, sans-serif",
-          fontWeight: '400',
-          wordWrap: 'break-word',
-        }}>{position}</div>
+        <div className="member-card-name">{name}</div>
+        <div className="member-card-position">{position}</div>
       </div>
 
       {/* Photo — top 0, height 251/359 = 69.92%, renders on top of text area */}
@@ -113,7 +99,7 @@ function MemberCard({ name, position, photo }) {
 export default function Team() {
   return (
     <div style={{ background: '#272525', minHeight: '100vh', paddingTop: 'max(24px, 6.25vw)', paddingBottom: 'max(24px, 6.25vw)' }}>
-      <div style={{
+      <div className="team-page-inner" style={{
           paddingLeft: 'clamp(60px, 8vw, 140px)',
           paddingRight: 'clamp(60px, 8vw, 140px)',
         }}>
@@ -129,11 +115,7 @@ export default function Team() {
           </div>
 
           {/* Leadership cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {leadershipMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -152,11 +134,7 @@ export default function Team() {
           </div>
 
           {/* Speaker Curation cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {curationMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -175,11 +153,7 @@ export default function Team() {
           </div>
 
           {/* Design cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {designMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -198,11 +172,7 @@ export default function Team() {
           </div>
 
           {/* Innovation cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {innovationMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -221,11 +191,7 @@ export default function Team() {
           </div>
 
           {/* Logistics cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {logisticsMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -244,11 +210,7 @@ export default function Team() {
           </div>
 
           {/* Salon cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {salonMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}
@@ -267,11 +229,7 @@ export default function Team() {
           </div>
 
           {/* PR cards grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'clamp(16px, 1.74vw, 25px)',
-          }}>
+          <div className="team-grid">
             {prMembers.map((member, i) => (
               <MemberCard key={i} {...member} />
             ))}

@@ -61,6 +61,57 @@ body {
   }
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 1.74vw, 25px);
+}
+
+.member-card-name {
+  color: white;
+  font-family: 'PP Pangaia';
+  font-weight: 200;
+  word-wrap: break-word;
+  font-size: clamp(40px, 1.8vw, 26px);
+  line-height: 1.15;
+}
+
+.member-card-position {
+  color: white;
+  font-family: 'Noto Sans Display', 'Noto Sans', Arial, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-size: clamp(10px, 0.9vw, 14px);
+  line-height: 1.2;
+}
+
+.member-card-textbox {
+  padding-left: clamp(8px, 1.74vw, 25px);
+  padding-right: clamp(8px, 1.74vw, 25px);
+  gap: 0;
+}
+
+@media (max-width: 640px) {
+  .team-page-inner {
+    padding-left: 40px !important;
+    padding-right: 16px !important;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .member-card-name {
+    font-size: clamp(12px, 3.5vw, 16px);
+  }
+  .member-card-position {
+    font-size: clamp(9px, 2vw, 11px);
+  }
+  .member-card-textbox {
+    padding-left: 12px;
+    padding-right: 6px;
+  }
+}
+
 @media (max-width: 768px) {
   .event-info-container {
     top: 76.9% !important;
