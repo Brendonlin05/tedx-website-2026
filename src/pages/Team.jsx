@@ -60,37 +60,35 @@ function MemberCard({ name, position, photo }) {
   return (
     <div style={{
       width: '100%',
+      paddingBottom: '95%',
       position: 'relative',
-      background: 'linear-gradient(90deg, #272525 50%, #0036D8 100%)',
       overflow: 'hidden',
       borderRadius: 20,
-      aspectRatio: '430 / 359',
     }}>
       {/* Border overlay */}
       <div style={{position: 'absolute', inset: 0, borderRadius: 20, outline: 'max(1px, 0.07vw) white solid', outlineOffset: 'calc(-1 * max(1px, 0.07vw))', pointerEvents: 'none', zIndex: 3}} />
 
-      {/* Text area */}
+      {/* Photo */}
+      {photo && (
+        <img src={photo} alt={name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+      )}
+
+      {/* Text overlay at bottom */}
       <div className="member-card-textbox" style={{
         position: 'absolute',
-        top: '74%',
+        bottom: 0,
         left: 0,
         right: 0,
-        bottom: 0,
         background: 'linear-gradient(90deg, #272525 50%, #0036D8 100%)',
-        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        paddingTop: 'clamp(12px, 2vw, 28px)',
+        paddingBottom: 'clamp(12px, 2vw, 28px)',
+        zIndex: 2,
       }}>
         <div className="member-card-name">{name}</div>
         <div className="member-card-position">{position}</div>
-      </div>
-
-      {/* Photo — top 0, height 251/359 = 69.92%, renders on top of text area */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '75%', overflow: 'hidden', background: '#3A3A3A' }}>
-        {photo && (
-          <img src={photo} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
-        )}
       </div>
     </div>
   )

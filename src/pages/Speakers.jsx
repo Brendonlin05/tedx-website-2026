@@ -45,16 +45,16 @@ function SpeakerCard({ name, description, image, onClick }) {
       style={{background: '#1F1E1E', overflow: 'hidden', borderRadius: 20, position: 'relative', cursor: 'pointer'}}
     >
       <div style={{position: 'absolute', inset: 0, borderRadius: 20, outline: 'max(1px, 0.07vw) white solid', outlineOffset: 'calc(-1 * max(1px, 0.07vw))', pointerEvents: 'none', zIndex: 2}} />
-      <div style={{width: '100%', aspectRatio: '430 / 208', overflow: 'hidden'}}>
+      <div style={{width: '100%', aspectRatio: '430 / 260', overflow: 'hidden'}}>
         <img
           src={image}
           alt={name}
           style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}}
         />
       </div>
-      <div className="h-[110px] md:h-[151px]" style={{width: '100%', position: 'relative', background: '#1F1E1E', overflow: 'hidden'}}>
-        <div style={{left: 23, top: 25, position: 'absolute', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 32, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word'}}>{name}</div>
-        <div style={{left: 23, top: 65, position: 'absolute', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word'}}>{description}</div>
+      <div style={{width: '100%', background: '#1F1E1E', padding: '0 23px', minHeight: 'clamp(90px, 9vw, 130px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8}}>
+        <div style={{color: 'white', fontSize: 32, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
+        <div style={{color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.4}}>{description}</div>
       </div>
     </div>
   )
@@ -188,7 +188,7 @@ export default function Speakers() {
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />
-        <div style={{position: 'relative', paddingLeft: 'clamp(40px, 3.47vw, 50px)', paddingRight: 'clamp(40px, 3.47vw, 50px)', paddingTop: 'calc(99px + clamp(24px, 9vw, 130px))', paddingBottom: 'clamp(40px, 6.25vw, 90px)'}}>
+        <div style={{position: 'relative', paddingLeft: 'clamp(60px, 6vw, 90px)', paddingRight: 'clamp(60px, 6vw, 90px)', paddingTop: 'calc(99px + clamp(24px, 9vw, 130px))', paddingBottom: 'clamp(40px, 6.25vw, 90px)'}}>
           <div style={{textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(32px, 3.56vw, 56px)', fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', marginBottom: 'clamp(28px, 5.97vw, 86px)'}}>Speakers</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{gap: 'clamp(16px, 1.74vw, 25px)'}}>
             {speakers.map((speaker, i) => (

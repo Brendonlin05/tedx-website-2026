@@ -72,7 +72,7 @@ body {
   font-family: 'PP Pangaia';
   font-weight: 200;
   word-wrap: break-word;
-  font-size: clamp(40px, 1.8vw, 26px);
+  font-size: clamp(20px, 2.4vw, 34px);
   line-height: 1.15;
 }
 
@@ -101,7 +101,7 @@ body {
     gap: 10px;
   }
   .member-card-name {
-    font-size: clamp(12px, 3.5vw, 16px);
+    font-size: clamp(14px, 4vw, 20px);
   }
   .member-card-position {
     font-size: clamp(9px, 2vw, 11px);
