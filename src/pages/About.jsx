@@ -65,7 +65,7 @@ export default function About() {
               padding: 'clamp(24px, 4vw, 44px) clamp(20px, 3.5vw, 44px)',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
+              justifyContent: 'flex-start',
             }}>
               <div className="about-body-text" style={{
                 color: 'white',
@@ -96,7 +96,7 @@ export default function About() {
                   borderRadius: 9999,
                   outline: '1px white solid',
                   outlineOffset: '-1px',
-                  background: '#000',
+                  background: '#272525',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',

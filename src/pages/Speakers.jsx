@@ -55,7 +55,7 @@ function SpeakerCard({ name, description, image, onClick }) {
         />
       </div>
       <div className="speaker-card-text" style={{width: '100%', background: '#1F1E1E', padding: '0 23px', paddingTop: 28, minHeight: 'clamp(118px, 11.6vw, 158px)', marginTop: -28, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8}}>
-        <div style={{color: 'white', fontSize: 24, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
+        <div className="speaker-card-name" style={{color: 'white', fontSize: 24, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
         <div className="speaker-card-description" style={{color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.4}}>{description}</div>
       </div>
     </div>

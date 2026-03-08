@@ -101,6 +101,12 @@ body {
   font-size: clamp(30px, 3.2vw, 46px);
 }
 
+@media (min-width: 640px) {
+  .speaker-card-name {
+    font-size: clamp(24px, 2.2vw, 34px);
+  }
+}
+
 @media (max-width: 640px) {
   .about-card {
     flex-direction: column;
