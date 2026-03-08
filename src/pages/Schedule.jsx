@@ -137,16 +137,16 @@ function TalkCard({ title, speaker, description, icon }) {
             <div style={{width: 'clamp(28px, 3.54vw, 51px)', height: 'clamp(28px, 3.54vw, 51px)', background: '#D9D9D9', borderRadius: 9999, flexShrink: 0}} />
           )}
           <div>
-            <div style={{textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(14px, 1.67vw, 24px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word'}}>{speaker.name}</div>
-            <div style={{marginTop: 'max(6px, 0.9vw)', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(11px, 1.11vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word'}}>{speaker.description}</div>
+            <div style={{textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(14px, 1.67vw, 24px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word'}}>{speaker.name}</div>
+            <div style={{marginTop: 'max(6px, 0.9vw)', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(11px, 1.11vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word'}}>{speaker.description}</div>
           </div>
         </div>
       </div>
 
       {/* Description */}
       <div
-        className="mr-4 md:mr-0 md:max-w-[35vw]"
-        style={{marginTop: 'max(12px, 2.5vw)', marginLeft: 'max(16px, 2.78vw)', paddingBottom: 'max(16px, 2.5vw)', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(11px, 1.11vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word'}}
+        className="talk-description mr-4 md:mr-0 md:max-w-[35vw]"
+        style={{marginTop: 'max(12px, 2.5vw)', marginLeft: 'max(16px, 2.78vw)', paddingBottom: 'max(16px, 2.5vw)', textBoxTrim: 'trim-both', textBoxEdge: 'cap alphabetic', color: 'white', fontSize: 'clamp(11px, 1.11vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word'}}
       >{description}</div>
     </div>
   )
@@ -158,7 +158,7 @@ export default function Schedule() {
       <div style={{paddingLeft: 'max(16px, 3.47vw)', paddingRight: 'max(16px, 3.47vw)', display: 'flex', flexDirection: 'column', gap: 'max(20px, 5.63vw)'}}>
         {scheduleItems.map((item, i) => (
           <div key={i}>
-            <div style={{color: 'white', fontSize: 'clamp(12px, 1.11vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', marginBottom: 'max(8px, 1.53vw)'}}>
+            <div style={{color: 'white', fontSize: 'clamp(12px, 1.11vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', marginBottom: 'max(8px, 1.53vw)'}}>
               {item.time}
             </div>
             {item.type === 'simple' ? (

@@ -38,7 +38,7 @@ export default function About() {
             About
           </div>
 
-          {/* Card — image first in DOM so it's on top on mobile */}
+          {/* Card */}
           <div className="about-card" style={{
             width: '100%',
             maxWidth: 885,
@@ -50,7 +50,7 @@ export default function About() {
           }}>
             <div style={{position: 'absolute', inset: 0, borderRadius: 20, outline: '2px white solid', outlineOffset: '-2px', pointerEvents: 'none', zIndex: 2}} />
 
-            {/* Image panel — first in DOM = top on mobile, order:2 = right on desktop */}
+            {/* Image panel — order:2 on desktop, order:2 on mobile */}
             <div className="about-right" style={{overflow: 'hidden'}}>
               <img
                 src={import.meta.env.BASE_URL + "Eunoia Poster.png"}
@@ -59,18 +59,18 @@ export default function About() {
               />
             </div>
 
-            {/* Text panel — second in DOM = bottom on mobile, order:1 = left on desktop */}
+            {/* Text panel — order:1 on desktop, order:1 on mobile */}
             <div className="about-left" style={{
               background: '#272525',
               padding: 'clamp(24px, 4vw, 44px) clamp(20px, 3.5vw, 44px)',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'space-between',
+              justifyContent: 'center',
             }}>
-              <div style={{
+              <div className="about-body-text" style={{
                 color: 'white',
                 fontSize: 'clamp(10px, calc(8.43px + 0.491vw), 16px)',
-                fontFamily: 'Early Sans Variable',
+                fontFamily: 'early-sans-variable',
                 fontWeight: '400',
                 wordWrap: 'break-word',
                 lineHeight: 1.6,
@@ -81,26 +81,29 @@ export default function About() {
                 <br /><br />
                 We invite you to join us as we share, ponder, and discuss the ideas and technologies that will shape our future.
               </div>
+            </div>
 
+            {/* Button row — order:3 on mobile, absolute on desktop */}
+            <div className="about-btn-row">
               <a
+                className="about-btn"
                 href="https://www.tedxcmu.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  alignSelf: 'flex-start',
-                  marginTop: 'auto',
                   width: 'clamp(80px, 14.44vw, 208px)',
                   height: 'clamp(28px, 4.03vw, 58px)',
                   borderRadius: 9999,
                   outline: '1px white solid',
                   outlineOffset: '-1px',
+                  background: '#000',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   textDecoration: 'none',
                   color: 'white',
                   fontSize: 'clamp(9px, 1.11vw, 16px)',
-                  fontFamily: 'Early Sans Variable',
+                  fontFamily: 'early-sans-variable',
                   fontWeight: '400',
                 }}
               >

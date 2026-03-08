@@ -54,9 +54,9 @@ function SpeakerCard({ name, description, image, onClick }) {
           style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}}
         />
       </div>
-      <div className="speaker-card-text" style={{width: '100%', background: '#1F1E1E', padding: '0 23px', minHeight: 'clamp(90px, 9vw, 130px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8}}>
-        <div style={{color: 'white', fontSize: 32, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
-        <div className="speaker-card-description" style={{color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.4}}>{description}</div>
+      <div className="speaker-card-text" style={{width: '100%', background: '#1F1E1E', padding: '0 23px', paddingTop: 28, minHeight: 'clamp(118px, 11.6vw, 158px)', marginTop: -28, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8}}>
+        <div style={{color: 'white', fontSize: 24, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
+        <div className="speaker-card-description" style={{color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.4}}>{description}</div>
       </div>
     </div>
   )
@@ -106,7 +106,7 @@ function SpeakerModal({ speaker, onClose }) {
             <div style={{color: 'white', fontSize: 26, fontFamily: 'PP Pangaia', fontWeight: '200', marginBottom: 12, wordWrap: 'break-word'}}>
               {speaker.name}
             </div>
-            <div style={{color: 'white', fontSize: 13, fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.5}}>
+            <div style={{color: 'white', fontSize: 13, fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.5}}>
               {speaker.bio}
             </div>
           </div>
@@ -150,7 +150,7 @@ function SpeakerModal({ speaker, onClose }) {
             textBoxEdge: 'cap alphabetic',
             color: 'white',
             fontSize: 'min(1.1vw, 13px)',
-            fontFamily: 'Early Sans Variable',
+            fontFamily: 'early-sans-variable',
             fontWeight: '400',
             wordWrap: 'break-word',
             lineHeight: 1.5,

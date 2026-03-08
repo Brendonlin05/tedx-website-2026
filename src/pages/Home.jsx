@@ -18,6 +18,20 @@ export default function Home() {
       }
     }
 
+    // iOS Safari requires a play/pause to unlock currentTime scrubbing
+    const unlock = () => {
+      video.play().then(() => {
+        video.pause()
+        video.currentTime = 0
+      }).catch(() => {})
+    }
+
+    if (video.readyState >= 1) {
+      unlock()
+    } else {
+      video.addEventListener('loadedmetadata', unlock, { once: true })
+    }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -70,8 +84,8 @@ export default function Home() {
 
           {/* Bottom-right event info */}
           <div className="event-info-container flex flex-col gap-[12px] md:flex-row md:gap-[4.17vw]" style={{ right: '5.28%', top: '89.75%', position: 'absolute', alignItems: 'flex-start' }}>
-            <div style={{ color: 'white', fontSize: 20, fontFamily: 'Early Sans Variable', fontWeight: '400', wordWrap: 'break-word' }}>TEDxCMU: EUNOIA</div>
-            <div style={{ color: 'white', fontSize: 20, fontFamily: 'Early Sans Variable', fontWeight: '400', lineHeight: '24px', wordWrap: 'break-word', flexShrink: 0 }}>MARCH 14, 4:00 PM<br />UC MCCONOMY</div>
+            <div style={{ color: 'white', fontSize: 20, fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word' }}>TEDxCMU: EUNOIA</div>
+            <div style={{ color: 'white', fontSize: 20, fontFamily: 'early-sans-variable', fontWeight: '400', lineHeight: '24px', wordWrap: 'break-word', flexShrink: 0 }}>MARCH 14, 4:00 PM<br />UC MCCONOMY</div>
           </div>
         </div>
       </section>
@@ -88,9 +102,9 @@ export default function Home() {
         >
           {Array.from({ length: 8 }).map((_, i) => (
             <span key={i} style={{ display: 'inline-flex', alignItems: 'baseline', paddingRight: '3.33vw' }}>
-              <span style={{ color: 'white', fontSize: '3.46vw', fontFamily: 'Early Sans Variable', fontWeight: '400', textTransform: 'uppercase' }}>ideas&nbsp;</span>
+              <span style={{ color: 'white', fontSize: '3.46vw', fontFamily: 'early-sans-variable', fontWeight: '400', textTransform: 'uppercase' }}>ideas&nbsp;</span>
               <span style={{ color: 'white', fontSize: '3.27vw', fontFamily: 'PP Pangaia', fontWeight: '200', textTransform: 'uppercase' }}>LIVE BETWEEN&nbsp;</span>
-              <span style={{ color: 'white', fontSize: '3.46vw', fontFamily: 'Early Sans Variable', fontWeight: '400', textTransform: 'uppercase' }}>PEOPLE.</span>
+              <span style={{ color: 'white', fontSize: '3.46vw', fontFamily: 'early-sans-variable', fontWeight: '400', textTransform: 'uppercase' }}>PEOPLE.</span>
             </span>
           ))}
         </div>
@@ -125,13 +139,13 @@ export default function Home() {
       >
         {/* Heading — left: 50, top: 61 in Figma → 3.47vw, 4.24vw */}
         <div className="footer-heading" style={{ left: '3.47vw', top: '4.24vw', position: 'absolute' }}>
-          <span style={{ color: 'white', fontSize: '3.56vw', fontFamily: 'Early Sans Variable', fontWeight: '400', lineHeight: '3.56vw', wordWrap: 'break-word', display: 'block' }}>WELCOME</span>
+          <span style={{ color: 'white', fontSize: '3.56vw', fontFamily: 'early-sans-variable', fontWeight: '400', lineHeight: '3.56vw', wordWrap: 'break-word', display: 'block' }}>WELCOME</span>
           <span style={{ color: 'white', fontSize: '3.56vw', fontFamily: 'PP Pangaia', fontWeight: '200', lineHeight: '3.56vw', wordWrap: 'break-word', display: 'block' }}>TO EUNOIA</span>
         </div>
 
         {/* Body text — absolute left: 504 (50+454), top: 61, width: 430 in Figma */}
         <div className="footer-body" style={{ left: '35vw', top: '4.24vw', width: '29.86vw', position: 'absolute' }}>
-          <p style={{ color: 'white', fontSize: 20, fontFamily: 'Early Sans Variable', fontWeight: '400', lineHeight: '24px', margin: 0 }}>
+          <p style={{ color: 'white', fontSize: 20, fontFamily: 'early-sans-variable', fontWeight: '400', lineHeight: '24px', margin: 0 }}>
             The TEDxCMU Board is thrilled to introduce our theme for the 2026 conference: Eunoia.
             <br /><br />
             Eunoia is about beautiful thinking. It's the good will we cultivate when we share our ideas with one another.

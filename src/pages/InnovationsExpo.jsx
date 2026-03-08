@@ -28,7 +28,7 @@ function ExpoCard({ name, description, image, onClick }) {
       </div>
 
       {/* Info section */}
-      <div style={{background: '#272525', padding: 'clamp(20px, 2.8vw, 42px) clamp(16px, 2.1vw, 30px)', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 28px)'}}>
+      <div className="expo-card-info" style={{background: '#272525', padding: 'clamp(20px, 2.8vw, 42px) clamp(16px, 2.1vw, 30px)', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 28px)'}}>
         <div className="expo-card-name" style={{
           textBoxTrim: 'trim-both',
           textBoxEdge: 'cap alphabetic',
@@ -96,7 +96,7 @@ function ExpoModal({ item, onClose }) {
           />
         </div>
         <div style={{padding: 'clamp(16px, 2vw, 28px)'}}>
-          <div style={{color: 'white', fontSize: 'clamp(35px, 2.5vw, 36px)', fontFamily: 'PP Pangaia', fontWeight: '200', marginBottom: 'clamp(8px, 1vw, 14px)', wordWrap: 'break-word'}}>
+          <div className="expo-modal-title" style={{color: 'white', fontSize: 'clamp(35px, 2.5vw, 25px)', fontFamily: 'PP Pangaia', fontWeight: '200', marginBottom: 'clamp(8px, 1vw, 14px)', wordWrap: 'break-word', lineHeight: 1.0}}>
             {item.name}
           </div>
           <div style={{color: 'white', fontSize: 'clamp(13px, 1.1vw, 16px)', fontFamily: 'Noto Sans Display', fontWeight: '400', fontStyle: 'normal', wordWrap: 'break-word', lineHeight: 1.5}}>
@@ -138,10 +138,10 @@ export default function InnovationsExpo() {
         />
 
         {/* Content */}
-        <div style={{
+        <div className="inno-inner" style={{
           position: 'relative',
-          paddingLeft: 'clamp(40px, 3.47vw, 50px)',
-          paddingRight: 'clamp(40px, 3.47vw, 50px)',
+          paddingLeft: 'clamp(60px, 6vw, 90px)',
+          paddingRight: 'clamp(60px, 6vw, 90px)',
           paddingTop: 'calc(99px + clamp(12px, 4.5vw, 65px))',
           paddingBottom: 'clamp(40px, 6.25vw, 90px)',
         }}>

@@ -17,7 +17,7 @@
   --color-ted-gray-dark: #333333;
   --color-nav-dark: #272525;
   --color-nav-blue: #0036D8;
-  --font-sans: 'Early Sans Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'early-sans-variable', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -60,6 +60,11 @@ body {
     flex: 1;
     width: unset;
   }
+  .about-btn-row {
+    position: absolute;
+    bottom: clamp(24px, 4vw, 44px);
+    left: clamp(20px, 3.5vw, 44px);
+  }
 }
 
 .team-grid {
@@ -97,6 +102,33 @@ body {
 }
 
 @media (max-width: 640px) {
+  .about-card {
+    flex-direction: column;
+  }
+  .about-right {
+    width: 100%;
+    height: auto;
+  }
+  .about-right img {
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  .about-left {
+    min-height: unset;
+    padding: 16px 16px 28px !important;
+  }
+  .about-body-text {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+  .about-btn-row {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 16px 16px;
+    background: linear-gradient(180deg, #0036D8 0%, #1A1A1A 100%);
+  }
   .team-page-inner {
     padding-left: 24px !important;
     padding-right: 24px !important;
@@ -105,6 +137,13 @@ body {
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
+  .inno-inner {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .talk-description {
+    margin-top: 24px !important;
+  }
   .speaker-card-text {
     gap: 3px !important;
   }
@@ -112,7 +151,14 @@ body {
     font-size: 10px !important;
   }
   .expo-card-name {
-    font-size: 50px;
+    font-size: 22px;
+  }
+  .expo-card-info {
+    gap: 20px !important;
+  }
+  .expo-modal-title {
+    margin-bottom: 16px !important;
+    font-size: 24px !important;
   }
   .expo-card-description {
     font-size: 10px !important;
@@ -157,7 +203,7 @@ body {
   .footer-body p {
     font-size: 16px !important;
     line-height: 19.2px !important;
-    font-family: 'Early Sans Variable' !important;
+    font-family: 'early-sans-variable' !important;
     font-weight: 400 !important;
   }
 }
