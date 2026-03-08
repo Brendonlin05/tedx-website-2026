@@ -24,6 +24,7 @@ body {
   margin: 0;
   background-color: var(--color-ted-black);
   color: var(--color-ted-white);
+  font-family: var(--font-sans);
 }
 
 @keyframes marquee {
@@ -91,10 +92,30 @@ body {
   gap: 0;
 }
 
+.expo-card-name {
+  font-size: clamp(30px, 3.2vw, 46px);
+}
+
 @media (max-width: 640px) {
   .team-page-inner {
-    padding-left: 40px !important;
-    padding-right: 16px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .speakers-inner {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .speaker-card-text {
+    gap: 3px !important;
+  }
+  .speaker-card-description {
+    font-size: 10px !important;
+  }
+  .expo-card-name {
+    font-size: 50px;
+  }
+  .expo-card-description {
+    font-size: 10px !important;
   }
   .team-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -47,6 +47,7 @@ export default function Home() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            pointerEvents: 'none',
           }}
         >
           <source src={import.meta.env.BASE_URL + "eunoia-background.mp4"} type="video/mp4" />
@@ -103,7 +104,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }}
           >
             <source src={import.meta.env.BASE_URL + "finalteaser1 no sound.mp4"} type="video/mp4" />
           </video>

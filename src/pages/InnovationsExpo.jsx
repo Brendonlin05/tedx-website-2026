@@ -29,11 +29,10 @@ function ExpoCard({ name, description, image, onClick }) {
 
       {/* Info section */}
       <div style={{background: '#272525', padding: 'clamp(20px, 2.8vw, 42px) clamp(16px, 2.1vw, 30px)', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 28px)'}}>
-        <div style={{
+        <div className="expo-card-name" style={{
           textBoxTrim: 'trim-both',
           textBoxEdge: 'cap alphabetic',
           color: 'white',
-          fontSize: 'clamp(18px, 2.69vw, 39px)',
           fontFamily: 'PP Pangaia',
           fontWeight: '200',
           lineHeight: 1.1,
@@ -41,7 +40,7 @@ function ExpoCard({ name, description, image, onClick }) {
         }}>
           {name}
         </div>
-        <div style={{
+        <div className="expo-card-description" style={{
           textBoxTrim: 'trim-both',
           textBoxEdge: 'cap alphabetic',
           color: 'white',
@@ -97,7 +96,7 @@ function ExpoModal({ item, onClose }) {
           />
         </div>
         <div style={{padding: 'clamp(16px, 2vw, 28px)'}}>
-          <div style={{color: 'white', fontSize: 'clamp(22px, 2.5vw, 36px)', fontFamily: 'PP Pangaia', fontWeight: '200', marginBottom: 'clamp(8px, 1vw, 14px)', wordWrap: 'break-word'}}>
+          <div style={{color: 'white', fontSize: 'clamp(35px, 2.5vw, 36px)', fontFamily: 'PP Pangaia', fontWeight: '200', marginBottom: 'clamp(8px, 1vw, 14px)', wordWrap: 'break-word'}}>
             {item.name}
           </div>
           <div style={{color: 'white', fontSize: 'clamp(13px, 1.1vw, 16px)', fontFamily: 'Noto Sans Display', fontWeight: '400', fontStyle: 'normal', wordWrap: 'break-word', lineHeight: 1.5}}>

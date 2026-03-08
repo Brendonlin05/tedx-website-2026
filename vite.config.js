@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/tedx-website-2026/',
+  base: '/', 
   plugins: [react(), tailwindcss()],
 })
