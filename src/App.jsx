@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Schedule from './pages/Schedule'
@@ -9,7 +9,7 @@ import Team from './pages/Team'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <main style={{ paddingTop: 99 }}>
         <Routes>
@@ -21,6 +21,6 @@ export default function App() {
           <Route path="/team" element={<Team />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

@@ -49,14 +49,14 @@ export default function Home() {
             objectFit: 'cover',
           }}
         >
-          <source src="/eunoia-background.mp4" type="video/mp4" />
+          <source src={import.meta.env.BASE_URL + "eunoia-background.mp4"} type="video/mp4" />
         </video>
 
         {/* Figma overlay elements */}
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
           {/* Centered wordmark */}
           <img
-            src="/Eunoia wordmark.png"
+            src={import.meta.env.BASE_URL + "Eunoia wordmark.png"}
             alt="Eunoia"
             className="max-w-[80%] md:max-w-[60%]"
             style={{
@@ -105,7 +105,7 @@ export default function Home() {
             preload="auto"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           >
-            <source src="/finalteaser1 no sound.mp4" type="video/mp4" />
+            <source src={import.meta.env.BASE_URL + "finalteaser1 no sound.mp4"} type="video/mp4" />
           </video>
         </div>
       </section>

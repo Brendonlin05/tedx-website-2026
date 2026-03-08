@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL
+
 const scheduleItems = [
   {
     type: 'simple',
@@ -16,10 +18,10 @@ const scheduleItems = [
   speaker: {
     name: 'Nia Sioux',
     description: 'Actress, Dancer, Content Creator, and New York Times Best Selling Author',
-    avatar: '/Nia_Headshot.png',
+    avatar: base + 'Nia_Headshot.png',
   },
   description: 'Is reality tv ethical? This talk will explore the ethics of reality tv through the lens of a former childhood reality tv star with a focus on the importance of media literacy skills and its application. The intersectionality of reality tv in the news, pop culture, social media, and politics makes this a relevant topic in today\'s ever-changing world. As an educated society, who is ultimately responsible for the consumption of media and what role do they play in the narratives that are told?',
-  icon: '/icon 1.png',
+  icon: base + 'icon 1.png',
 },
 {
   type: 'talk',
@@ -28,10 +30,10 @@ const scheduleItems = [
   speaker: {
     name: 'Joel Byars',
     description: 'Comedian and Podcaster',
-    avatar: '/Joel%20Headshot.png',
+    avatar: base + 'Joel Headshot.png',
   },
   description: 'Talk description goes here.',
-  icon: '/icon 2.png',
+  icon: base + 'icon 2.png',
 },
   {
     type: 'simple',
@@ -45,10 +47,10 @@ const scheduleItems = [
     speaker: {
       name: 'Missi Matthews',
       description: 'Steelers Sideline Reporter',
-      avatar: '/Missi%20Headshot.png',
+      avatar: base + 'Missi Headshot.png',
     },
     description: 'Sports are a defining part of Pittsburgh culture. Growing up an athlete and currently working as a reporter for the Pittsburgh Steelers, Missi Matthews now sees her childhood and profession intersecting with how she speaks to her young boys. What does it mean to shape our communities, from the lessons we pass along to our children to fueling the fire of a 92-year-old fandom, and how do we consider the impact of our words in inspiring the generations that follow us? Just months away from the Pittsburgh-based NFL Draft, Missi reflects on the true life lessons found in talking about sports for a living.',
-    icon: '/icon 5.png',
+    icon: base + 'icon 5.png',
   },
   {
     type: 'talk',
@@ -57,10 +59,10 @@ const scheduleItems = [
     speaker: {
       name: 'Jona Naqo',
       description: 'MS Candidate at Carnegie Mellon',
-      avatar: '/Jona%20Headshot.png',
+      avatar: base + 'Jona Headshot.png',
     },
     description: 'Talk description goes here.',
-    icon: '/icon 4.png',
+    icon: base + 'icon 4.png',
   },
   {
     type: 'talk',
@@ -69,10 +71,10 @@ const scheduleItems = [
     speaker: {
       name: 'David Schott',
       description: 'Law Professor',
-      avatar: '/David%20headshot.png',
+      avatar: base + 'David headshot.png',
     },
     description: 'Talk description goes here.',
-    icon: '/icon 5.png',
+    icon: base + 'icon 5.png',
   },
   {
     type: 'simple',

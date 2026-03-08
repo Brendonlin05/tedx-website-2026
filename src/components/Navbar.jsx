@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="shrink-0" onClick={() => window.scrollTo(0, 0)}>
           <img
-            src="/black-tedx-logo 1.png"
+            src={import.meta.env.BASE_URL + "black-tedx-logo 1.png"}
             alt="TEDxCMU"
             className="object-contain w-[90px] h-[36px] lg:w-[135px] lg:h-[55px]"
           />

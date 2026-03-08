@@ -4,12 +4,12 @@ export default function About() {
       <section style={{marginTop: -99, position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
         {/* Background */}
         <img
-          src="/Static-Background 2.png"
+          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src="/Eunoia%20Poster%20Background.png"
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />
@@ -53,7 +53,7 @@ export default function About() {
             {/* Image panel — first in DOM = top on mobile, order:2 = right on desktop */}
             <div className="about-right" style={{overflow: 'hidden'}}>
               <img
-                src="/Eunoia%20Poster.png"
+                src={import.meta.env.BASE_URL + "Eunoia Poster.png"}
                 alt="Eunoia"
                 style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block'}}
               />

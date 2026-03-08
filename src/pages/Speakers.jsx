@@ -1,40 +1,42 @@
 import { useState } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const speakers = [
   {
     name: 'Nia Sioux',
     description: 'Actress, Dancer, Content Creator, and New York Times Best Selling Author',
     bio: 'Nia Sioux, who first captured audiences on Dance Moms at age 9, has grown into a multi-hyphenate talent—performer, actress, author, and advocate with 15M+ followers. She starred in Lifetime\'s Imperfect High, produced Facebook Watch\'s Dance with Nia, partnered with AdCouncil on mental health, and graduated from UCLA. Alongside collabs with brands from Aerie to Starbucks, she recently released her second book, Bottom of the Pyramid (Harper Horizon, Nov. 4), a memoir of resilience and self-discovery, which instantly hit the New York Times Best Sellers List!',
-    image: '/Nia%20Speaker%20Card.png',
-    headshot: '/Nia_Headshot.png',
+    image: base + 'Nia Speaker Card.png',
+    headshot: base + 'Nia_Headshot.png',
   },
   {
     name: 'Joel Byars',
     description: 'Comedian and Podcaster',
     bio: 'Joel Byars is an award-winning comedian and host of the Hot Breath! podcast, where he\'s interviewed over 400 comedians about the craft of comedy. He has dedicated over 16 years to both performing comedy and studying how humor can help people create real human connection in an increasingly disconnected world. Joel\'s research and clean comedy style have led to partnerships with inspiring organizations like the National Pediatric Cancer Foundation, bringing laughter where it\'s needed most.',
-    image: '/Joel%20Speaker%20Card.png',
-    headshot: '/Joel%20Headshot.png',
+    image: base + 'Joel Speaker Card.png',
+    headshot: base + 'Joel Headshot.png',
   },
   {
     name: 'Missi Matthews',
     description: 'Steelers Sideline Reporter',
     bio: 'Missi is an Emmy Award-Winning journalist who has covered the Pittsburgh Steelers since 2012. She joined WDVE-FM, as a sideline reporter in 2018. Missi grew up in Plum and attended the University of Pittsburgh. Outside of football, she is raising two sports-loving sons with her husband, Brad.',
-    image: '/Missi%20Speaker%20Card.png',
-    headshot: '/Missi%20Headshot.png',
+    image: base + 'Missi Speaker Card.png',
+    headshot: base + 'Missi Headshot.png',
   },
   {
     name: 'Jona Naqo',
     description: 'MS Candidate at Carnegie Mellon',
     bio: 'Jona is a CMU Swartz Entrepreneurial Fellow and MS candidate in the College of Engineering, where she studies how AI can be designed into products that solve real problems. Born in Greece and raised in Southern Albania, she earned her B.S. in Biochemistry from the University of the Pacific, where she secured an institutional research grant and founded a health education initiative serving underserved high schools in California\'s Central Valley. Now, she\'s focused on how AI can make healthcare work for everyone.',
-    image: '/Jona%20Speaker%20Card.png',
-    headshot: '/Jona%20Headshot.png',
+    image: base + 'Jona Speaker Card.png',
+    headshot: base + 'Jona Headshot.png',
   },
   {
     name: 'David Schott',
     description: 'Law Professor',
     bio: 'David Schott is a nationally esteemed law professor and CMU alumnus graduating with Dean\'s list honors. His legal career has endured since 1997, starting with opening his own law practice focusing on civil trial and domestic litigation and later serving as adjunct faculty at the University of Denver Sturm College of Law. Perhaps his greatest achievement is founding the Providence Foundation of Law & Leadership with a mission of providing scholarship funding to high school students who display an interest in the justice system.',
-    image: '/David%20Speaker%20Card.png',
-    headshot: '/David%20headshot.png',
+    image: base + 'David Speaker Card.png',
+    headshot: base + 'David headshot.png',
   },
 ]
 
@@ -179,12 +181,12 @@ export default function Speakers() {
       {selected && <SpeakerModal speaker={selected} onClose={() => setSelected(null)} />}
       <section style={{marginTop: -99, position: 'relative', width: '100%', overflow: 'hidden'}}>
         <img
-          src="/Static-Background 2.png"
+          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src="/Eunoia%20Poster%20Background.png"
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />

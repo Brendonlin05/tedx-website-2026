@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const expoItems = [
   {
     name: 'Interactive Particles Installation',
     description: 'An interactive particle system using computer vision to track user hand movements. Pick the options that best fit your personality and discover your scotty!',
-    image: '/Inno Expo Cover.png',
-    video: '/Particles video.mp4',
+    image: base + 'Inno Expo Cover.png',
+    video: base + 'Particles video.mp4',
   },
 ]
 
@@ -126,12 +128,12 @@ export default function InnovationsExpo() {
       <section style={{marginTop: -99, position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
         {/* Background */}
         <img
-          src="/Static-Background 2.png"
+          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src="/Eunoia%20Poster%20Background.png"
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />
