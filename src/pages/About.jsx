@@ -4,12 +4,12 @@ export default function About() {
       <section style={{marginTop: -99, position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
         {/* Background */}
         <img
-          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
+          src={import.meta.env.BASE_URL + "Static-Background 2.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />
@@ -53,7 +53,7 @@ export default function About() {
             {/* Image panel — order:2 on desktop, order:2 on mobile */}
             <div className="about-right" style={{overflow: 'hidden'}}>
               <img
-                src={import.meta.env.BASE_URL + "Eunoia Poster.png"}
+                src={import.meta.env.BASE_URL + "Eunoia Poster.webp"}
                 alt="Eunoia"
                 style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block'}}
               />

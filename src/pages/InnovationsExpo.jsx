@@ -6,7 +6,7 @@ const expoItems = [
   {
     name: 'Interactive Particles Installation',
     description: 'An interactive particle system using computer vision to track user hand movements. Pick the options that best fit your personality and discover your scotty!',
-    image: base + 'Inno Expo Cover.png',
+    image: base + 'Inno Expo Cover.webp',
     video: base + 'Particles video.mp4',
   },
 ]
@@ -15,6 +15,7 @@ function ExpoCard({ name, description, image, onClick }) {
   return (
     <div
       onClick={onClick}
+      className="expo-card-outer"
       style={{background: '#272525', overflow: 'hidden', borderRadius: 'clamp(14px, 1.68vw, 24px)', position: 'relative', cursor: 'pointer'}}
     >
       {/* Border overlay */}
@@ -28,7 +29,8 @@ function ExpoCard({ name, description, image, onClick }) {
       </div>
 
       {/* Info section */}
-      <div className="expo-card-info" style={{background: '#272525', padding: 'clamp(20px, 2.8vw, 42px) clamp(16px, 2.1vw, 30px)', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 28px)'}}>
+      <div className="expo-card-info" style={{background: '#272525', padding: 'clamp(20px, 2.8vw, 42px) clamp(16px, 2.1vw, 30px)', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 2vw, 28px)', position: 'relative'}}>
+        <div className="card-gradient-hover" />
         <div className="expo-card-name" style={{
           textBoxTrim: 'trim-both',
           textBoxEdge: 'cap alphabetic',
@@ -37,6 +39,8 @@ function ExpoCard({ name, description, image, onClick }) {
           fontWeight: '200',
           lineHeight: 1.1,
           wordWrap: 'break-word',
+          position: 'relative',
+          zIndex: 1,
         }}>
           {name}
         </div>
@@ -50,6 +54,8 @@ function ExpoCard({ name, description, image, onClick }) {
           fontWeight: '400',
           wordWrap: 'break-word',
           lineHeight: 1.5,
+          position: 'relative',
+          zIndex: 1,
         }}>
           {description}
         </div>
@@ -127,12 +133,12 @@ export default function InnovationsExpo() {
       <section style={{marginTop: -99, position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
         {/* Background */}
         <img
-          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
+          src={import.meta.env.BASE_URL + "Static-Background 2.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />

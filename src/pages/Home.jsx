@@ -71,7 +71,7 @@ export default function Home() {
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
           {/* Centered wordmark */}
           <img
-            src={import.meta.env.BASE_URL + "Eunoia wordmark.png"}
+            src={import.meta.env.BASE_URL + "Eunoia wordmark.webp"}
             alt="Eunoia"
             className="max-w-[80%] md:max-w-[60%]"
             style={{

@@ -7,56 +7,103 @@ const speakers = [
     name: 'Nia Sioux',
     description: 'Actress, Dancer, Content Creator, and New York Times Best Selling Author',
     bio: 'Nia Sioux, who first captured audiences on Dance Moms at age 9, has grown into a multi-hyphenate talent—performer, actress, author, and advocate with 15M+ followers. She starred in Lifetime\'s Imperfect High, produced Facebook Watch\'s Dance with Nia, partnered with AdCouncil on mental health, and graduated from UCLA. Alongside collabs with brands from Aerie to Starbucks, she recently released her second book, Bottom of the Pyramid (Harper Horizon, Nov. 4), a memoir of resilience and self-discovery, which instantly hit the New York Times Best Sellers List!',
-    image: base + 'Nia Speaker Card.png',
-    headshot: base + 'Nia_Headshot.png',
+    image: base + 'Nia Speaker Card.webp',
+    headshot: base + 'Nia_Headshot.webp?v=4',
+    gradient: 'linear-gradient(90deg, #272525 0%, #0036D8 100%)',
+    hoverGradient: 'linear-gradient(90deg, #0036D8 0%, #9D9DF8 100%)',
+    textColor: 'white',
   },
   {
     name: 'Joel Byars',
     description: 'Comedian and Podcaster',
     bio: 'Joel Byars is an award-winning comedian and host of the Hot Breath! podcast, where he\'s interviewed over 400 comedians about the craft of comedy. He has dedicated over 16 years to both performing comedy and studying how humor can help people create real human connection in an increasingly disconnected world. Joel\'s research and clean comedy style have led to partnerships with inspiring organizations like the National Pediatric Cancer Foundation, bringing laughter where it\'s needed most.',
-    image: base + 'Joel Speaker Card.png',
-    headshot: base + 'Joel Headshot.png',
+    image: base + 'Joel Speaker Card.webp',
+    headshot: base + 'Joel Headshot.webp?v=2',
+    gradient: 'linear-gradient(90deg, #0036D8 0%, #9D9DF8 100%)',
+    hoverGradient: 'linear-gradient(90deg, #9D9DF8 0%, #F888EB 100%)',
+    textColor: 'white',
   },
   {
     name: 'Missi Matthews',
     description: 'Steelers Sideline Reporter',
     bio: 'Missi is an Emmy Award-Winning journalist who has covered the Pittsburgh Steelers since 2012. She joined WDVE-FM, as a sideline reporter in 2018. Missi grew up in Plum and attended the University of Pittsburgh. Outside of football, she is raising two sports-loving sons with her husband, Brad.',
-    image: base + 'Missi Speaker Card.png',
-    headshot: base + 'Missi Headshot.png',
+    image: base + 'Missi Speaker Card.webp?v=2',
+    headshot: base + 'Missi Headshot.webp?v=2',
+    gradient: 'linear-gradient(90deg, #9D9DF8 0%, #F888EB 100%)',
+    hoverGradient: 'linear-gradient(90deg, #F888EB 0%, #CD082E 100%)',
+    textColor: 'white',
   },
   {
     name: 'Jona Naqo',
     description: 'MS Candidate at Carnegie Mellon',
     bio: 'Jona is a CMU Swartz Entrepreneurial Fellow and MS candidate in the College of Engineering, where she studies how AI can be designed into products that solve real problems. Born in Greece and raised in Southern Albania, she earned her B.S. in Biochemistry from the University of the Pacific, where she secured an institutional research grant and founded a health education initiative serving underserved high schools in California\'s Central Valley. Now, she\'s focused on how AI can make healthcare work for everyone.',
-    image: base + 'Jona Speaker Card.png',
-    headshot: base + 'Jona Headshot.png',
+    image: base + 'Jona Speaker Card.webp?v=2',
+    headshot: base + 'Jona Headshot.webp?v=2',
+    gradient: 'linear-gradient(90deg, #F888EB 0%, #CD082E 100%)',
+    hoverGradient: 'linear-gradient(90deg, #CD082E 0%, #272525 100%)',
+    textColor: 'white',
   },
   {
     name: 'David Schott',
     description: 'Law Professor',
     bio: 'David Schott is a nationally esteemed law professor and CMU alumnus graduating with Dean\'s list honors. His legal career has endured since 1997, starting with opening his own law practice focusing on civil trial and domestic litigation and later serving as adjunct faculty at the University of Denver Sturm College of Law. Perhaps his greatest achievement is founding the Providence Foundation of Law & Leadership with a mission of providing scholarship funding to high school students who display an interest in the justice system.',
-    image: base + 'David Speaker Card.png',
-    headshot: base + 'David headshot.png',
+    image: base + 'David Speaker Card.webp?v=2',
+    headshot: base + 'David headshot.webp?v=2',
+    gradient: 'linear-gradient(90deg, #CD082E 0%, #272525 100%)',
+    hoverGradient: 'linear-gradient(90deg, #272525 0%, #0036D8 100%)',
+    textColor: 'white',
   },
 ]
 
-function SpeakerCard({ name, description, image, onClick }) {
+function SpeakerCard({ name, description, headshot, gradient, hoverGradient, textColor, onClick }) {
   return (
     <div
       onClick={onClick}
-      style={{background: '#1F1E1E', overflow: 'hidden', borderRadius: 20, position: 'relative', cursor: 'pointer'}}
+      className="speaker-card-new"
+      style={{
+        '--hover-gradient': hoverGradient,
+        width: '100%',
+        background: '#272525',
+        overflow: 'hidden',
+        borderRadius: '4.65%',
+        position: 'relative',
+        cursor: 'pointer',
+        aspectRatio: '1624 / 1681',
+      }}
     >
-      <div style={{position: 'absolute', inset: 0, borderRadius: 20, outline: 'max(1px, 0.07vw) white solid', outlineOffset: 'calc(-1 * max(1px, 0.07vw))', pointerEvents: 'none', zIndex: 2}} />
-      <div style={{width: '100%', aspectRatio: '430 / 260', overflow: 'hidden'}}>
-        <img
-          src={image}
-          alt={name}
-          style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}}
-        />
-      </div>
-      <div className="speaker-card-text" style={{width: '100%', background: '#1F1E1E', padding: '0 23px', paddingTop: 28, minHeight: 'clamp(118px, 11.6vw, 158px)', marginTop: -28, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 8}}>
-        <div className="speaker-card-name" style={{color: 'white', fontSize: 24, fontFamily: 'PP Pangaia', fontWeight: '200', wordWrap: 'break-word', lineHeight: 1.15}}>{name}</div>
-        <div className="speaker-card-description" style={{color: 'white', fontSize: 'clamp(12px, 1.25vw, 16px)', fontFamily: 'early-sans-variable', fontWeight: '400', wordWrap: 'break-word', lineHeight: 1.4}}>{description}</div>
+      {/* White outline overlay */}
+      <div style={{position: 'absolute', inset: 0, borderRadius: '4.65%', outline: 'max(1px, 0.13vw) white solid', outlineOffset: 'calc(-1 * max(1px, 0.13vw))', pointerEvents: 'none', zIndex: 10}} />
+
+      {/* Full-card headshot */}
+      <img
+        src={headshot}
+        alt={name}
+        style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'}}
+      />
+
+      {/* Gradient text section — bottom 31.24% of card, overlays the photo */}
+      <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: '31.24%', background: gradient, overflow: 'hidden'}}>
+        <div className="card-gradient-hover" />
+        <div className="sc-name" style={{
+          position: 'absolute',
+          left: '5.81%',
+          top: '17.99%',
+          right: '5.81%',
+          color: textColor,
+          fontFamily: 'PP Pangaia',
+          fontWeight: '200',
+          wordWrap: 'break-word',
+        }}>{name}</div>
+        <div className="sc-desc" style={{
+          position: 'absolute',
+          left: '5.81%',
+          top: '51.80%',
+          right: '5.81%',
+          color: textColor,
+          fontFamily: 'Noto Sans Display, Noto Sans, Arial, sans-serif',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+        }}>{description}</div>
       </div>
     </div>
   )
@@ -97,7 +144,7 @@ function SpeakerModal({ speaker, onClose }) {
         <div className="md:hidden">
           <div style={{width: '100%', aspectRatio: '4/3', overflow: 'hidden'}}>
             <img
-              src={speaker.headshot}
+              src={speaker.image}
               alt={speaker.name}
               style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}}
             />
@@ -117,7 +164,7 @@ function SpeakerModal({ speaker, onClose }) {
           {/* Right image */}
           <div style={{position: 'absolute', left: '52.63%', top: 0, right: 0, bottom: 0}}>
             <img
-              src={speaker.headshot}
+              src={speaker.image}
               alt={speaker.name}
               style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}}
             />
@@ -181,12 +228,12 @@ export default function Speakers() {
       {selected && <SpeakerModal speaker={selected} onClose={() => setSelected(null)} />}
       <section style={{marginTop: -99, position: 'relative', width: '100%', overflow: 'hidden'}}>
         <img
-          src={import.meta.env.BASE_URL + "Static-Background 2.png"}
+          src={import.meta.env.BASE_URL + "Static-Background 2.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}}
         />
         <img
-          src={import.meta.env.BASE_URL + "Eunoia Poster Background.png"}
+          src={import.meta.env.BASE_URL + "Eunoia Poster Background.webp"}
           alt=""
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0}}
         />

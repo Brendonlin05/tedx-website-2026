@@ -101,6 +101,50 @@ body {
   font-size: clamp(30px, 3.2vw, 46px);
 }
 
+.speaker-card-new {
+  container-type: inline-size;
+}
+
+.about-btn {
+  transition: background-color 0.2s;
+}
+.about-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-gradient-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Each speaker card uses its own next-in-chain gradient via CSS variable */
+.speaker-card-new .card-gradient-hover {
+  background: var(--hover-gradient);
+}
+
+/* Expo card gradient */
+.expo-card-outer .card-gradient-hover {
+  background: linear-gradient(270deg, #272525 0%, #0036D8 100%);
+}
+
+.speaker-card-new:hover .card-gradient-hover,
+.expo-card-outer:hover .card-gradient-hover {
+  opacity: 1;
+}
+
+/* font-size as % of card width, matching Figma (120.86/1624 and 60.43/1624) */
+.speaker-card-new .sc-name {
+  font-size: 7.44cqw;
+  line-height: 1.1;
+}
+.speaker-card-new .sc-desc {
+  font-size: 3.72cqw;
+  line-height: 1.35;
+}
+
 @media (min-width: 640px) {
   .speaker-card-name {
     font-size: clamp(24px, 2.2vw, 34px);

@@ -1,68 +1,68 @@
 const base = import.meta.env.BASE_URL
 
 const prMembers = [
-  { name: 'Waiz Mansoor', position: 'Head of PR', photo: base + 'pr/WAIZ MANSOOR.jpg' },
-  { name: 'Charvi Hoysal', position: 'PR', photo: base + 'pr/CHARVI HOYSAL.jpg' },
-  { name: 'James Lee', position: 'PR', photo: base + 'pr/JAMES LEE.jpg' },
-  { name: 'Jodie Yang', position: 'PR', photo: base + 'pr/Jodie Yang.jpg' },
-  { name: 'Juhee Park', position: 'PR', photo: base + 'pr/JUHEE PARK.jpg' },
-  { name: 'Vivian Nam', position: 'PR', photo: base + 'pr/Vivian Nam.jpg' },
+  { name: 'Waiz Mansoor', position: 'Head of PR', photo: base + 'pr/WAIZ MANSOOR.webp' },
+  { name: 'Charvi Hoysal', position: 'PR', photo: base + 'pr/CHARVI HOYSAL.webp' },
+  { name: 'James Lee', position: 'PR', photo: base + 'pr/JAMES LEE.webp' },
+  { name: 'Jodie Yang', position: 'PR', photo: base + 'pr/Jodie Yang.webp' },
+  { name: 'Juhee Park', position: 'PR', photo: base + 'pr/JUHEE PARK.webp' },
+  { name: 'Vivian Nam', position: 'PR', photo: base + 'pr/Vivian Nam.webp' },
 ]
 
 const salonMembers = [
-  { name: 'Mo Fahad', position: 'Head of Salon', photo: base + 'salon/Mo Fahad.jpg' },
-  { name: 'Abby Chong', position: 'Salon', photo: base + 'salon/Abby Chong.jpg' },
-  { name: 'Andrew Xue', position: 'Salon', photo: base + 'salon/Andrew Xue.jpg' },
-  { name: 'Anna Abello', position: 'Salon', photo: base + 'salon/Anna Abello.jpg' },
-  { name: 'Lauren Cho', position: 'Salon', photo: base + 'salon/Lauren Cho.jpg' },
-  { name: 'Milen Tesfaye', position: 'Salon', photo: base + 'salon/Milen_Tesfaye.jpg' },
-  { name: 'Sally Chen', position: 'Salon', photo: base + 'salon/Sally Chen.jpg' },
+  { name: 'Mo Fahad', position: 'Head of Salon', photo: base + 'salon/Mo Fahad.webp' },
+  { name: 'Abby Chong', position: 'Salon', photo: base + 'salon/Abby Chong.webp' },
+  { name: 'Andrew Xue', position: 'Salon', photo: base + 'salon/Andrew Xue.webp' },
+  { name: 'Anna Abello', position: 'Salon', photo: base + 'salon/Anna Abello.webp' },
+  { name: 'Lauren Cho', position: 'Salon', photo: base + 'salon/Lauren Cho.webp' },
+  { name: 'Milen Tesfaye', position: 'Salon', photo: base + 'salon/Milen_Tesfaye.webp' },
+  { name: 'Sally Chen', position: 'Salon', photo: base + 'salon/Sally Chen.webp' },
 ]
 
 const logisticsMembers = [
-  { name: 'Luna Lee', position: 'Head of Logistics', photo: base + 'logistics/Luna Lee.jpg' },
-  { name: 'Angel Yu', position: 'Logistics', photo: base + 'logistics/Angel Yu.jpg' },
-  { name: 'Archita Jain', position: 'Logistics', photo: base + 'logistics/Archita Jain.jpg' },
-  { name: 'Gregory Surjadi', position: 'Logistics', photo: base + 'logistics/Gregory Surjadi.jpg' },
-  { name: 'Helen Fu', position: 'Logistics', photo: base + 'logistics/Helen Fu.jpg' },
+  { name: 'Luna Lee', position: 'Head of Logistics', photo: base + 'logistics/Luna Lee.webp' },
+  { name: 'Angel Yu', position: 'Logistics', photo: base + 'logistics/Angel Yu.webp' },
+  { name: 'Archita Jain', position: 'Logistics', photo: base + 'logistics/Archita Jain.webp' },
+  { name: 'Gregory Surjadi', position: 'Logistics', photo: base + 'logistics/Gregory Surjadi.webp' },
+  { name: 'Helen Fu', position: 'Logistics', photo: base + 'logistics/Helen Fu.webp' },
 ]
 
 const innovationMembers = [
-  { name: 'Roshni Ramesh', position: 'Head of Innovation', photo: base + 'inno/ROSHNI RAMESH.jpg' },
-  { name: 'Abhay Kadambi', position: 'Innovation', photo: base + 'inno/ABHAY KADAMBI.jpg' },
-  { name: 'Brendon Lin', position: 'Innovation', photo: base + 'inno/Brendon Lin.jpg' },
-  { name: 'Vincent Lo', position: 'Innovation', photo: base + 'inno/VINCENT LO.jpg' },
+  { name: 'Roshni Ramesh', position: 'Head of Innovation', photo: base + 'inno/ROSHNI RAMESH.webp' },
+  { name: 'Abhay Kadambi', position: 'Innovation', photo: base + 'inno/ABHAY KADAMBI.webp' },
+  { name: 'Brendon Lin', position: 'Innovation', photo: base + 'inno/Brendon Lin.webp' },
+  { name: 'Vincent Lo', position: 'Innovation', photo: base + 'inno/VINCENT LO.webp' },
 ]
 
 const designMembers = [
-  { name: 'Melissa Qin', position: 'Head of Design', photo: base + 'design/Melissa Qin.jpg' },
-  { name: 'Chori Jun', position: 'Design', photo: base + 'design/Chori Jun.jpg' },
-  { name: 'Garrett Lee', position: 'Design', photo: base + 'design/Garrett Lee.jpg' },
-  { name: 'Jackie Ryu', position: 'Design', photo: base + 'design/Jackie Ryu.jpg' },
-  { name: 'Stacy Chen', position: 'Design', photo: base + 'design/Stacy Chen.jpg' },
-  { name: 'Swetha Joseph', position: 'Design', photo: base + 'design/Swetha Joseph.jpg' },
+  { name: 'Melissa Qin', position: 'Head of Design', photo: base + 'design/Melissa Qin.webp' },
+  { name: 'Chori Jun', position: 'Design', photo: base + 'design/Chori Jun.webp' },
+  { name: 'Garrett Lee', position: 'Design', photo: base + 'design/Garrett Lee.webp' },
+  { name: 'Jackie Ryu', position: 'Design', photo: base + 'design/Jackie Ryu.webp' },
+  { name: 'Stacy Chen', position: 'Design', photo: base + 'design/Stacy Chen.webp' },
+  { name: 'Swetha Joseph', position: 'Design', photo: base + 'design/Swetha Joseph.webp' },
 ]
 
 const curationMembers = [
-  { name: 'Eesha Palasamudrum', position: 'Head of Speaker Curation', photo: base + 'curation/Eesha Palasamudrum.jpg' },
-  { name: 'Eu-Rway Chew', position: 'Speaker Curation', photo: base + 'curation/Eu-RwayChew.jpg' },
-  { name: 'Madelyn Streisfeld', position: 'Speaker Curation', photo: base + 'curation/Madelyn Streisfeld.jpg' },
-  { name: 'Reagan Appel', position: 'Speaker Curation', photo: base + 'curation/Reagan Appel.jpg' },
-  { name: 'Sara Chokshi', position: 'Speaker Curation', photo: base + 'curation/SARA CHOKSHI.jpg' },
-  { name: 'Tara Prahlad', position: 'Speaker Curation', photo: base + 'curation/Tara Prahlad.jpg' },
+  { name: 'Eesha Palasamudrum', position: 'Head of Speaker Curation', photo: base + 'curation/Eesha Palasamudrum.webp' },
+  { name: 'Eu-Rway Chew', position: 'Speaker Curation', photo: base + 'curation/Eu-RwayChew.webp' },
+  { name: 'Madelyn Streisfeld', position: 'Speaker Curation', photo: base + 'curation/Madelyn Streisfeld.webp' },
+  { name: 'Reagan Appel', position: 'Speaker Curation', photo: base + 'curation/Reagan Appel.webp' },
+  { name: 'Sara Chokshi', position: 'Speaker Curation', photo: base + 'curation/SARA CHOKSHI.webp' },
+  { name: 'Tara Prahlad', position: 'Speaker Curation', photo: base + 'curation/Tara Prahlad.webp' },
 ]
 
 const leadershipMembers = [
-  { name: 'Stephanie Lu', position: 'Co President', photo: base + 'pres/Stephanie Lu.jpg' },
-  { name: 'Aaron HuSun', position: 'Co President', photo: base + 'pres/Aaron HuSun.jpg' },
-  { name: 'Bill Chang', position: 'VP', photo: base + 'pres/Bill Chang.jpg' },
+  { name: 'Stephanie Lu', position: 'Co President', photo: base + 'pres/Stephanie Lu.webp' },
+  { name: 'Aaron HuSun', position: 'Co President', photo: base + 'pres/Aaron HuSun.webp' },
+  { name: 'Bill Chang', position: 'VP', photo: base + 'pres/Bill Chang.webp' },
 ]
 
 function MemberCard({ name, position, photo }) {
   return (
     <div style={{
       width: '100%',
-      paddingBottom: '95%',
+      paddingBottom: '100%',
       position: 'relative',
       overflow: 'hidden',
       borderRadius: 20,

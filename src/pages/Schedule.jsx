@@ -18,10 +18,11 @@ const scheduleItems = [
   speaker: {
     name: 'Nia Sioux',
     description: 'Actress, Dancer, Content Creator, and New York Times Best Selling Author',
-    avatar: base + 'Nia_Headshot.png',
+    avatar: base + 'Nia_Headshot.webp',
   },
-  description: 'Is reality tv ethical? This talk will explore the ethics of reality tv through the lens of a former childhood reality tv star with a focus on the importance of media literacy skills and its application. The intersectionality of reality tv in the news, pop culture, social media, and politics makes this a relevant topic in today\'s ever-changing world. As an educated society, who is ultimately responsible for the consumption of media and what role do they play in the narratives that are told?',
-  icon: base + 'icon 1.png',
+  description: 'Is reality tv ethical? This talk will explore the ethics of reality tv through the lens of a former childhood reality tv star with a focus on the importance of media literacy skills and its application. The intersectionality of reality tv in the news, pop culture, social media, and politics makes this a relevant topic in today’s ever-changing world. As an educated society, who is ultimately responsible for the consumption of media and what role do they play in the narratives that are told?',
+  icon: base + 'icon 1.webp',
+  iconPadding: '5vw',
 },
 {
   type: 'talk',
@@ -30,10 +31,11 @@ const scheduleItems = [
   speaker: {
     name: 'Joel Byars',
     description: 'Comedian and Podcaster',
-    avatar: base + 'Joel Headshot.png',
+    avatar: base + 'Joel Headshot.webp',
   },
-  description: 'Talk description goes here.',
-  icon: base + 'icon 2.png',
+  description: 'As a professional comedian of 16 years Joel Byars has immersed himself in the world of comedy by performing clean stand-up comedy for audiences of all types. In this talk, he delves into a framework on how to laugh more in everyday life.',
+  icon: base + 'icon 2.webp',
+  iconPadding: '3vw',
 },
   {
     type: 'simple',
@@ -47,34 +49,37 @@ const scheduleItems = [
     speaker: {
       name: 'Missi Matthews',
       description: 'Steelers Sideline Reporter',
-      avatar: base + 'Missi Headshot.png',
+      avatar: base + 'Missi Headshot.webp',
     },
     description: 'Sports are a defining part of Pittsburgh culture. Growing up an athlete and currently working as a reporter for the Pittsburgh Steelers, Missi Matthews now sees her childhood and profession intersecting with how she speaks to her young boys. What does it mean to shape our communities, from the lessons we pass along to our children to fueling the fire of a 92-year-old fandom, and how do we consider the impact of our words in inspiring the generations that follow us? Just months away from the Pittsburgh-based NFL Draft, Missi reflects on the true life lessons found in talking about sports for a living.',
-    icon: base + 'icon 5.png',
+    icon: base + 'icon 5.webp',
+    iconPadding: '6vw',
   },
   {
     type: 'talk',
     time: '6:20pm-6:40pm',
-    title: 'Title of Talk',
+    title: 'The Systems We Build Can\'t See Us | Empathy as Infrastructure',
     speaker: {
       name: 'Jona Naqo',
       description: 'MS Candidate at Carnegie Mellon',
-      avatar: base + 'Jona Headshot.png',
+      avatar: base + 'Jona Headshot.webp',
     },
-    description: 'Talk description goes here.',
-    icon: base + 'icon 4.png',
+    description: 'What happens when the systems we build can\'t see the people they\'re meant to serve? Jona Naqo makes the case that empathy isn\'t a soft add-on to good design—it\'s infrastructure. When we build for the people most likely to be overlooked, everyone benefits.',
+    icon: base + 'icon 4.webp',
+    iconPadding: '7vw',
   },
   {
     type: 'talk',
     time: '6:40pm-7:00pm',
-    title: 'Title of Talk',
+    title: 'Forging Our Code',
     speaker: {
       name: 'David Schott',
       description: 'Law Professor',
-      avatar: base + 'David headshot.png',
+      avatar: base + 'David headshot.webp',
     },
-    description: 'Talk description goes here.',
-    icon: base + 'icon 5.png',
+    description: 'In an increasingly siloed and atomized society, how we play the game is of even greater gravity. Our nation’s laws provide the code by which we live together, but that code is only as strong as the personal code each of us chooses to forge and uphold.',
+    icon: base + 'icon 5.webp',
+    iconPadding: '6vw',
   },
   {
     type: 'simple',
@@ -99,9 +104,9 @@ function SimpleCard({ title }) {
   )
 }
 
-function TalkCard({ title, speaker, description, icon }) {
+function TalkCard({ title, speaker, description, icon, iconPadding = '2vw' }) {
   return (
-    <div style={{width: '100%', position: 'relative', background: 'linear-gradient(90deg, #272525 50%, #0036D8 100%)', overflow: 'hidden', borderRadius: 20, outline: '0.14vw white solid', outlineOffset: '-0.14vw'}}>
+    <div style={{width: '100%', position: 'relative', background: 'linear-gradient(90deg, #272525 50%, #0036D8 100%)', overflow: 'hidden', borderRadius: 20, outline: '0.14vw white solid', outlineOffset: '-0.14vw', minHeight: '30vw'}}>
       {/* Rotated decorative vector — desktop only */}
       <div className="hidden md:block" style={{width: '100%', height: '100%', position: 'absolute', transform: 'rotate(90deg)', transformOrigin: 'top left', outline: '0.14vw white solid', outlineOffset: '-0.07vw'}} />
       {/* Vertical separator — desktop only */}
@@ -109,8 +114,8 @@ function TalkCard({ title, speaker, description, icon }) {
 
       {/* Icon in right panel — desktop only */}
       {icon && (
-        <div className="hidden md:flex" style={{position: 'absolute', top: 0, bottom: 0, right: 0, width: '30.14vw', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none'}}>
-          <img src={icon} alt="" style={{width: '55%', height: '70%', objectFit: 'contain'}} />
+        <div className="hidden md:flex" style={{position: 'absolute', top: 0, bottom: 0, right: 0, width: '30.14vw', alignItems: 'center', justifyContent: 'center', padding: iconPadding, pointerEvents: 'none'}}>
+          <img src={icon} alt="" style={{width: '100%', height: 'auto'}} />
         </div>
       )}
 
@@ -164,7 +169,7 @@ export default function Schedule() {
             {item.type === 'simple' ? (
               <SimpleCard title={item.title} />
             ) : (
-              <TalkCard title={item.title} speaker={item.speaker} description={item.description} icon={item.icon} />
+              <TalkCard title={item.title} speaker={item.speaker} description={item.description} icon={item.icon} iconPadding={item.iconPadding} />
             )}
           </div>
         ))}
