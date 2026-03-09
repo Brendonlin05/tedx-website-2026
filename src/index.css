@@ -230,6 +230,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .about-btn:hover {
+    background: transparent !important;
+  }
+  .speaker-card-new:hover .card-gradient-hover,
+  .expo-card-outer:hover .card-gradient-hover {
+    opacity: 0;
+  }
+
+
   .event-info-container {
     top: 76.9% !important;
   }

@@ -96,7 +96,7 @@ export default function Navbar() {
               className={`block text-lg transition-colors ${
                 location.pathname === link.path
                   ? 'text-white'
-                  : 'text-white/80 hover:text-white'
+                  : 'text-white/80'
               }`}
             >
               {link.name}
@@ -107,7 +107,7 @@ export default function Navbar() {
             href={TICKET_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-center text-white text-lg mt-4 transition-colors hover:bg-white/10 rounded-full"
+            className="block text-center text-white text-lg mt-4 rounded-full"
             style={{
               padding: '10px 0',
               border: '1px solid white',
